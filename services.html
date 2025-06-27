@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services - Kuttu Networks</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .service-card {
+      background-color: #e6f0ff;
+      border: 1px solid #cce0ff;
+      border-radius: 10px;
+      padding: 20px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card h3 {
+      margin: 0;
+      color: #003366;
+    }
+
+    .service-details {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .service-details p {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <img src="images/logo.png" alt="Kuttu Networks Logo" class="logo">
+      <h1 class="logo-text">Kuttu Networks</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="services-page">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p>We deliver reliable and secure services to ISPs, industries, and commercial sectors across India.</p>
+
+      <div class="service-grid">
+
+        <!-- Service 1 -->
+        <div class="service-card" onclick="toggleService('s1')">
+          <h3>Telecom Product Distribution</h3>
+          <div class="service-details" id="s1">
+            <p>Fusion Splicers (ATPL 999s, Fujikura, INNO, Sumitomo)</p>
+            <p>OTDRs, Cable Fault Locators, Power Meters</p>
+            <p>Fiber Cables (Single/Multi-Mode), Copper & Cat6 cables</p>
+            <p>Patch Cords, Pigtails, PLC Splitters, Joint Closures</p>
+            <p>Media Converters, SFP Modules, Switches</p>
+            <p>GPON/EPON OLTs & ONUs</p>
+            <h3>Pan-India delivery with installation support available:</h3>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card" onclick="toggleService('s2')">
+          <h3>CCTV Installation & Surveillance</h3>
+          <div class="service-details" id="s2">
+            <p>Secure your premises with our full-range CCTV & surveillance setup.</p>
+            <p>IP/Dome/Bullet/PTZ Cameras (2MP–8MP)</p>
+            <p>DVR/NVR systems with H.265+ compression</p>
+            <p>Motion detection, thermal cameras & video analytics</p>
+            <p>Boom barriers, access control systems, biometric devices</p>
+            <p>Full mobile app integration with remote access</p>
+            <p>One-day installation available in most regions.</p>
+            <p>6-month free post-installation maintenance.</p>
+            <p>Supply of splicing machines, OTDRs, fiber cables, joint closures, OLTs, ONUs, media converters, and passive accessories. Fast pan-India delivery with installation support.</p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card" onclick="toggleService('s3')">
+          <h3>Website Development for Small Industries</h3>
+          <div class="service-details" id="s3">
+            <p>We design powerful and practical websites that help industrial clients grow online.</p>
+            <p>Solutions Include:</p>
+            <p>Custom website design for factories, warehouses & workshops</p>
+            <p>Machine showcase galleries & product pages</p>
+            <p>GST-compliant quotation system</p>
+            <p>Google Business integration & SEO setup</p>
+            <p>WhatsApp/call/email support features</p>
+            <p>Includes domain, hosting, email setup & 6-month free support.</p>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card" onclick="toggleService('s4')">
+          <h3>24x7 ISP Technical Support</h3>
+          <div class="service-details" id="s4">
+            <p>Empowering local ISPs & LCOs with backend technology and manpower</p>
+            <p>Core Support Services:</p>
+            <p>24x7 NOC Monitoring (uptime, alerts, traffic)</p>
+            <p>Vendor coordination & LCO-level issue handling</p>
+            <p>Link downtime alerts with logs & resolution tracking</p>
+            <p>Field visit coordination</p>
+            <p>Monthly network health reports</p>
+            <h3>We support operations in Tamil Nadu, Andhra Pradesh, Karnataka, Kerala, Telangana, Delhi, UP & Uttarakhand.</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kuttu Networks (P) LTD. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleService(id) {
+      const all = document.querySelectorAll('.service-details');
+      all.forEach(section => {
+        if (section.id !== id) section.style.display = "none";
+      });
+
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
+
